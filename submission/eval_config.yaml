@@ -1,0 +1,8 @@
+# Per-task budgets. ~120 hidden tasks run one after another and the WHOLE run must finish
+# within 12 hours, or the submission fails. 120 x (4.5 min + ~1 min setup) ~= 11 h worst case.
+# Without this file the defaults (60 min / task) blow the 12 h limit.
+evaluation:
+  max_time_minutes: 4.5
+  max_tool_calls: 40
+  max_turns: 80
+  timeout_seconds: 180

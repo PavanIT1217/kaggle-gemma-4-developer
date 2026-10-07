@@ -1,0 +1,8 @@
+# Settings shared by every public config scoring 0.10-0.12: low temperature, thinking off,
+# modest output cap (the context window is only 32,768 tokens and prompt + output must fit).
+temperature: 0.2
+top_p: 0.95
+top_k: 40
+max_output_tokens: 4096
+thinking_config:
+  include_thoughts: false

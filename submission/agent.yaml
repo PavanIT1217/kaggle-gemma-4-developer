@@ -1,0 +1,17 @@
+# Root agent config. Must sit at the ROOT of submission.zip.
+# Schema: Google ADK Agent Config (YAML only), compiled by Kaggle's `adk-submission` package.
+agent_class: LlmAgent
+name: swe_coder
+description: Fixes a GitHub issue in a Python repository with a small, verified source patch.
+model: gemma-4-31b-it-qat-w4a16-ct   # the only model allowed
+instruction: !include prompts/system.md
+generate_content_config: !include configs/sampling.yaml
+tools:
+  - name: run_command
+  - name: read_file
+  - name: edit_file
+  - name: write_file
+  - name: search_similar_code   # query must be a symbol name, not a sentence
+  - name: get_code_neighbors
+  - name: get_status            # free (not counted against the budget)
+  - name: submit_patch          # free; records `git diff` of /workspace
