@@ -1,0 +1,16 @@
+{
+  "id": "YOUR_KAGGLE_USERNAME/gemma-agent-eval",
+  "title": "Gemma Agent Eval",
+  "code_file": "agent_eval.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaL4",
+  "competition_sources": ["gemma-4-developer-agent"],
+  "dataset_sources": ["metric/gemma-4-developer-agent-wheelhouse"],
+  "model_sources": ["google/gemma-4/Other/gemma-4-31b-it-qat-w4a16-ct/2"],
+  "kernel_sources": []
+}

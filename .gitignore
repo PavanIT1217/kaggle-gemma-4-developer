@@ -1,1 +1,4 @@
 submission.zip
+build/
+eval/runs/
+__pycache__/
